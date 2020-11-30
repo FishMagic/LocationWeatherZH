@@ -13,9 +13,9 @@ class sp_location_weather_widget_content extends WP_Widget {
 
 	function __construct() {
 		parent::__construct(
-			'sp_location_weather_widget_content', __( 'Location Weather', 'location-weather' ),
+			'sp_location_weather_widget_content', __( 'Location Weather ZH', 'location-weather' ),
 			array(
-				'description' => __( 'This widget is to display weather.', 'location-weather' ),
+				'description' => __( '这是一个可以显示天气的小部件', 'location-weather' ),
 			)
 		);
 	}
@@ -103,13 +103,13 @@ class sp_location_weather_widget_content extends WP_Widget {
 		$defaults = array(
 			'title'                    => '',
 			'location_weather_id'      => 1,
-			'location_weather_city'    => 'london',
-			'location_weather_country' => 'uk',
+			'location_weather_city'    => 'beijing',
+			'location_weather_country' => 'cn',
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title', 'location-weather' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( '标题', 'location-weather' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 				   value="<?php echo $instance['title']; ?>" class="widefat"/>
@@ -123,52 +123,52 @@ class sp_location_weather_widget_content extends WP_Widget {
 		</p>
 		<p>
 			<label
-					for="<?php echo esc_attr( $this->get_field_id( 'location_weather_city' ) ); ?>"><?php _e( 'City', 'location-weather' ); ?></label>
+					for="<?php echo esc_attr( $this->get_field_id( 'location_weather_city' ) ); ?>"><?php _e( '城市', 'location-weather' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'location_weather_city' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'location_weather_city' ) ); ?>"
 				   value="<?php echo esc_attr( $instance['location_weather_city'] ); ?>" style="width:100%;"/>
 		</p>
 		<p>
 			<label
-					for="<?php echo esc_attr( $this->get_field_id( 'location_weather_country' ) ); ?>"><?php _e( 'Country', 'location-weather' ); ?></label>
+					for="<?php echo esc_attr( $this->get_field_id( 'location_weather_country' ) ); ?>"><?php _e( '国家', 'location-weather' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'location_weather_country' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'location_weather_country' ) ); ?>"
 				   value="<?php echo esc_attr( $instance['location_weather_country'] ); ?>" style="width:100%;"/>
 		</p>
-		<p>The following fields are available in the <a href="https://shapedplugin.com/plugin/location-weather-pro/">Pro version</a></p>
+		<p>以下功能仅在 <a href="https://shapedplugin.com/plugin/location-weather-pro/">专业版</a> 可用/p>
 		<p>
-			<label disabled for=""><?php _e( 'Unit', 'location-weather' ); ?></label>
-			<select disabled id="" name="">
-				<option value="fahrenheit">Fahrenheit</option>
-				<option value="celsius">Celsius</option>
+			<label disabled for=""><?php _e( '单位', 'location-weather' ); ?></label>
+			<select id="" name="">
+				<option value="fahrenheit">华氏度</option>
+				<option value="celsius">摄氏度</option>
 			</select>
 		</p>
 		<p>
-			<label disabled for=""><?php _e( 'Auto Location', 'location-weather' ); ?></label>
+			<label disabled for=""><?php _e( '自动定位', 'location-weather' ); ?></label>
 			<select disabled id="" name="">
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+				<option value="yes">开</option>
+				<option value="no">关</option>
 			</select>
 		</p>
 		<p>
-			<label disabled for=""><?php _e( 'Date', 'location-weather' ); ?></label>
+			<label disabled for=""><?php _e( '日期', 'location-weather' ); ?></label>
 			<select disabled id="" name="">
-				<option value="show">Show</option>
-				<option value="hide">Hide</option>
+				<option value="show">显示</option>
+				<option value="hide">隐藏</option>
 			</select>
 		</p>
 		<p>
-			<label disabled for=""><?php _e( 'Humidity', 'location-weather' ); ?></label>
+			<label disabled for=""><?php _e( '湿度', 'location-weather' ); ?></label>
 			<select disabled id="" name="">
-				<option value="show">Show</option>
-				<option value="hide">Hide</option>
+				<option value="show">显示</option>
+				<option value="hide">隐藏</option>
 			</select>
 		</p>
 		<p>
-			<label disabled for=""><?php _e( 'Wind', 'location-weather' ); ?></label>
+			<label disabled for=""><?php _e( '风速', 'location-weather' ); ?></label>
 			<select disabled id="" name="">
-				<option value="show">Show</option>
-				<option value="hide">Hide</option>
+				<option value="show">显示</option>
+				<option value="hide">隐藏</option>
 			</select>
 		</p>
 

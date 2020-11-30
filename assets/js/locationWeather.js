@@ -3,6 +3,7 @@
  * Dependencies: OpenWeatherMap API for Location Weather plugin.
  * Author: Rubel Miah
  * Author URL: http://rubelmiah.com/
+ * Modifier: Laevatein Scarlet
  */
 
 ; (function ($) {
@@ -33,7 +34,7 @@
             lng: null,
             key: null,
             weatherDate: null,
-            lang: 'en',
+            lang: 'zh_cn',
             success: function () { },
             error: function (message) { }
         }
@@ -56,11 +57,11 @@
         // date converter
         function dateConverter(t) {
             var a = new Date(t * 1000);
-            var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            var months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
             var year = a.getFullYear();
             var month = months[a.getMonth()];
             var date = a.getDate();
-            return date + ' ' + month + ', ' + year;
+            return year + ' ' + month + ' ' + date;
         }
 
         // format time function
